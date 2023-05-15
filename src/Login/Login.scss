@@ -1,0 +1,33 @@
+.login-bg-image{
+    background-image: url(../assets/image/Login_BG.png);
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+
+    &::before{
+        background-color: rgba(3, 36, 151, 0.50);
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
+}
+.login-box{
+    background-color: white;
+    opacity: 0.75;
+    border-radius: 30px;
+}
+.root-in{
+    position: relative;
+}
+
+.login-label{
+    // font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
