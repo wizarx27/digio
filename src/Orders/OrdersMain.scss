@@ -1,0 +1,41 @@
+.orders-container{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+.order-table-labels{
+    border-radius: 50px;
+    margin-bottom: 10px;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid black;
+    .orders-table-name,.orders-table-id,.orders-table-status{
+        width: 32%;
+    }
+}
+
+.light-green{
+    background-color: #A8F5AB;
+}
+.light-red{
+    background-color: #F5A8A8;
+}
+.green{
+    background-color: #00FF19;
+}
+.yellow{
+    background-color: #FAFBC4;
+}
+
+.orders-table-status{
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    margin-right: 3px;
+    padding: 5px 20px;
+}
+
+.selected-table-card{
+    padding-top: 20px;
+}

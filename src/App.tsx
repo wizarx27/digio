@@ -18,7 +18,7 @@ function App() {
     if (location.pathname === "/") navigate("/login")
   },[])
   return (
-    <div className="App" style={{height:height}}>
+    <div className="App" style={{height:height*1.8}}>
       {location.pathname !== "/login" ? (
         <>
           <NavbarWrapper />

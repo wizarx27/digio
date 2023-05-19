@@ -3,3 +3,37 @@
     padding: 20px;
 
 }
+
+.table-recent{
+    border-radius: 50px;
+    background-color: #F5A8A8;
+    .table-status{
+        background-color: #FAFBC4;
+        padding: 6px;
+        border-radius: 20px;
+    }
+}
+
+.edit-menu-link,.view-detail-income-link{
+    text-align: center;
+}
+
+.widget-total-menu{
+    flex-grow: 1;
+    text-align: center;
+    .total-menu-header{
+        font-size: 25px;
+    }
+    .total-menu-count{
+        font-size: 75px;
+    }
+}
+.widget-income{
+    flex-grow: 1;
+    .widget-income-header{
+        font-size: 25px;
+    }
+    .widget-income-count{
+        font-size: 30px;
+    }
+}
