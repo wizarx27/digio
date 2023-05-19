@@ -1,4 +1,10 @@
-# Digio
-### To Do
+#  Digio
 
- - [ ] Buat App
+###  To Do
+
+  
+
+- [x] Buat App
+- [x] Tambah Page
+- [ ] Fungsionalitas
+- [ ] Design
