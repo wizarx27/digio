@@ -1,5 +1,14 @@
-import { Card, Col, Container, Nav, NavDropdown, Navbar, Row } from "react-bootstrap"
+import { Card, Col, Container, Dropdown, Nav, NavDropdown, Navbar, Row } from "react-bootstrap"
+
 import "./Dashboard.scss"
+import { forwardRef } from "react"
+import DropDownThreeDot from "./component/ThreeDot/ThreeDot"
+
+
+
+
+
+
 const Dashboard = ()=>{
     return(
         <div className="d-inline-block dashboard-container">
@@ -55,26 +64,22 @@ const Dashboard = ()=>{
                             </Card.Title>
                             <Card.Text>
                                     <Card className="table-recent">
-                                        <Card.Body className="d-flex w-100 align-items-center">
+                                        <Card.Body className="d-flex w-100 align-items-center p-2">
                                             <div className="flex-grow-1">TABEL#123123</div>
                                             <div className="table-status">PENDING</div>
-                                            <div>:</div>
+                                            <Dropdown>
+                                                <Dropdown.Toggle as={DropDownThreeDot("mb-1")}>
+                                                    
+                                                </Dropdown.Toggle>
+
+                                                <Dropdown.Menu >
+                                                    <Dropdown.Item href="#/action-1">Open</Dropdown.Item>
+                                                    <Dropdown.Item href="#/action-2">Preview</Dropdown.Item>
+                                                </Dropdown.Menu>
+                                            </Dropdown>
                                         </Card.Body>
                                     </Card>
-                                    <Card className="table-recent">
-                                        <Card.Body className="d-flex w-100 align-items-center">
-                                            <div className="flex-grow-1">TABEL#123123</div>
-                                            <div className="table-status">PENDING</div>
-                                            <div>:</div>
-                                        </Card.Body>
-                                    </Card>
-                                    <Card className="table-recent">
-                                        <Card.Body className="d-flex w-100 align-items-center">
-                                            <div className="flex-grow-1">TABEL#123123</div>
-                                            <div className="table-status">PENDING</div>
-                                            <div>:</div>
-                                        </Card.Body>
-                                    </Card>
+                                    
                             </Card.Text>
                         </Card.Body>
                     </Card>

@@ -2,11 +2,13 @@ import { Button, Col, Container, Form, InputGroup, Row } from "react-bootstrap"
 import "./Login.scss"
 import login_img from "../assets/image/Login_img.png"
 import { useNavigate } from "react-router-dom"
+import { useWindowSize } from "../hooks"
 
 const Login = ()=>{
+    const [width, height] = useWindowSize();
     const navigate = useNavigate()
     return(
-        <div className="h-100 login-bg-image">
+        <div className="login-bg-image" style={{minHeight:height*1.1}}>
             <Container className="root-in">
                 <Row className="login-box">
                     <Col xl={6} xxl={6} md={6} className="p-0">

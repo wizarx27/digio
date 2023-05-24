@@ -1,9 +1,12 @@
 import { Row } from "react-bootstrap"
 import "./Sidebar.scss"
 import { Link } from "react-router-dom"
+import { useWindowSize } from "../../../hooks"
 const Sidebar = ()=>{
+    const [width,height] = useWindowSize()
+
     return(
-        <div className="h-100 sidebar-cont">
+        <div className="sidebar-cont" style={{minHeight:height}}>
             <div className="ps-3">
                 <h3>Digio</h3>
                 <div className="d-flex flex-column">

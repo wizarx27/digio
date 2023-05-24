@@ -10,7 +10,7 @@ import Sidebar from './Dashboard/component/Sidebar/Sidebar';
 
 
 function App() {
-  const [width, height] = useWindowSize();
+  
   const navigate = useNavigate()
   const location = useLocation()
   useEffect(()=>{
@@ -18,7 +18,7 @@ function App() {
     if (location.pathname === "/") navigate("/login")
   },[])
   return (
-    <div className="App" style={{height:height*1.8}}>
+    <div className="App">
       {location.pathname !== "/login" ? (
         <>
           <NavbarWrapper />

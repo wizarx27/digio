@@ -1,6 +1,7 @@
-import { Card, Col, Form, FormCheck, Table } from "react-bootstrap"
+import { Card, Col, Dropdown, Form, FormCheck, Table } from "react-bootstrap"
 import "./OrdersMain.scss"
 import { useState } from "react"
+import DropDownThreeDot from "../Dashboard/component/ThreeDot/ThreeDot";
 
 interface Ordersinterface{
     tableName:string;
@@ -120,7 +121,17 @@ const OrdersMain = ()=>{
                                                 {item.statusOrders}
                                             </div>
                                         }
-                                        <div>:</div>
+                                        <Dropdown>
+                                            <Dropdown.Toggle as={DropDownThreeDot("mb-1")}></Dropdown.Toggle>
+                                            <Dropdown.Menu>
+                                                <Dropdown.Item>
+                                                    Item 1
+                                                </Dropdown.Item>
+                                                <Dropdown.Item>
+                                                    Item 2
+                                                </Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </div>
                                 )
                             })
@@ -132,7 +143,7 @@ const OrdersMain = ()=>{
                 {
                     selectedTables.map((item)=>{
                         return(
-                            <Card className="w-100 selected-table-card p-3">
+                            <Card className="w-100 selected-table-card p-3 mb-2">
                                 <Card.Title className="d-flex">
                                     <div className="flex-grow-1"></div>
                                     <div className="flex-grow-1">Table 1</div>

@@ -1,5 +1,11 @@
 .menu-card-container{
     min-width: 200px;
+    position: relative;
+}
+
+.dropdown-three{
+    position: absolute;
+    right: 10px;
 }
 
 .plus-menu{
