@@ -7,6 +7,7 @@ import Login from './Login/Login';
 import { useWindowSize } from './hooks';
 import NavbarWrapper from './Dashboard/component/Navbar/NavbarWrapper';
 import Sidebar from './Dashboard/component/Sidebar/Sidebar';
+import { renderSidebar } from './const';
 
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
     document.title = 'Digio';
     if (location.pathname === "/") navigate("/login")
   },[])
+  
   return (
     <div className="App">
-      {location.pathname !== "/login" ? (
+      { !renderSidebar.some((item) => {return location.pathname.match(item) }) ? (
         <>
           <NavbarWrapper />
           <div className='d-flex h-100'>

@@ -8,6 +8,7 @@ import Login from './Login/Login';
 import Dashboard from './Dashboard/Dashboard';
 import MenuMain from './Menu/MenuMain';
 import OrdersMain from './Orders/OrdersMain';
+import { MobileCatalogue, MobileMain, MobileMenu } from './Mobile';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -32,6 +33,20 @@ const router = createBrowserRouter([
       {
         path:"orders/",
         element:<OrdersMain />
+      },
+      {
+        path:"mobile/",
+        element:<MobileMain />,
+        children:[
+          {
+            path:"catalogue/",
+            element:<MobileCatalogue />
+          },
+          {
+            path:"menu/",
+            element:<MobileMenu />
+          }
+        ]
       }
     ]
   },
